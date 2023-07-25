@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+</head>
+
+<body>
+
+  <h1>
+    Post App
+  </h1>
+  <textarea id="inputTextarea" oninput="autoExpand(event)" placeholder="Write your post..."></textarea>
+<hr>
+  <div>
+    <div class="chat-utilities">
+      <div class="utility-container">
+        <ul class="utility-group">
+          <li class="emoji-selector" id="emojiSelector">
+            <div class="input-container">
+              <input id="emojiSearch" type="text" name="" placeholder="Search...">
+            </div>
+            <ul id="emojiList" class="emoji-list">
+
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id="a" style="display: flex;justify-content: space-between;width: 40%;margin-top: -25px;">
+    <li id="emojiSelectorIcon"><img src="./face-smile-regular.svg" alt=""></li>
+    <!-- <span><i><b> B </b></i></span> -->
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="35"
+      height="35" viewBox="0 0 256 256" xml:space="preserve" id="btn" style="transform: rotate(-35deg);cursor: pointer;">
+
+      <defs>
+      </defs>
+      <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
+        transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
+        <polygon points="0,14.69 0,39.65 51,45 0,50.35 0,75.31 90,45 "
+        style="fill: blue;stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10;  fill-rule: nonzero; opacity: 1;"
+          transform="  matrix(1 0 0 1 0 0) " />
+      </g>
+    </svg>
+  </div>
+  </div><hr>
+  <div id="posts">
+
+  </div>
+
+
+  <script type="module" src="./script.js"></script>
+  <script>
+   function autoExpand(event) {
+    const element = event.target;
+    element.style.height = 'auto';
+    element.style.height = `${element.scrollHeight}px`;
+  }
+  </script>
+
+</body>
+
+</html>
